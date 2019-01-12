@@ -1,0 +1,38 @@
+ether mining software basic steps: 
+
+- install linux
+
+- install graphics cards drivers (search "Drivers" on linux system, find the proprietary Nvidia drivers, install)
+
+- update & upgrade linux for all dependencies 
+
+- install ethereum: 
+   sudo apt-get install software-properties-common
+   sudo add-apt-repository -y ppa:ethereum/ethereum
+   sudo apt-get update
+   sudo apt-get install ethereum 
+
+- install libcurl3:
+  https://packages.ubuntu.com/cosmic/amd64/libcurl3/download
+  http://mirrors.kernel.org/ubuntu/pool/universe/c/curl3/libcurl3_7.58.0-2ubuntu2_amd64.deb
+
+- download claymore:
+  (all releases)
+  https://github.com/nanopool/Claymore-Dual-Miner/releases
+  (latest, with process)
+  https://github.com/nanopool/Claymore-Dual-Miner/releases/download/v11.8/Claymore.s.Dual.Ethereum.Decred_Siacoin_Lbry_Pascal_Blake2s_Keccak.AMD.NVIDIA.GPU.Miner.v11.8.-.LINUX.tar.gz
+  tar -xzf Claymore.s.Dual.Ethereum.Decred_Siacoin_Lbry_Pascal_Blake2s_Keccak.AMD.NVIDIA.GPU.Miner.v11.8.-.LINUX.tar.gz
+  mv "Claymore's Dual Ethereum+Decred_Siacoin_Lbry_Pascal_Blake2s_Keccak AMD+NVIDIA GPU Miner v11.8 - LINUX" Claymore
+  
+- after claymore download, run: 
+  - sudo apt update
+  - sudo apt install ocl-icd-opencl-dev
+
+
+- main wallet: 
+  0x600f38420121Ee72dd0d60521A8B7a329C979850
+
+- Claymore inline config mining ETH: 
+  ./Claymore/ethdcrminer64 -epool eu1.ethermine.org:4444 -ewal 0x600f38420121Ee72dd0d60521A8B7a329C979850 -erate 0 
+
+
