@@ -1,4 +1,4 @@
 #!/bin/bash
 
 
-~/Claymore/ethdcrminer64 -epool eu1.ethermine.org:4444 -ewal 0x600f38420121Ee72dd0d60521A8B7a329C979850 -erate 0
+./ethdcrminer64 -epool eu1.ethermine.org:4444 -ewal 0x600f38420121Ee72dd0d60521A8B7a329C979850 -erate 0
